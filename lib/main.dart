@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
 
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +24,7 @@ class MyApp extends StatelessWidget {
             MyListItem(placename:'Red Fort' ,imgurl:'assets/images/red_fort.jpg', price: 1500 ),
             MyListItem(placename:'India Gate' ,imgurl:'assets/images/india_gate.jpg', price: 600 ),
             MyListItem(placename:'Golden Temple' ,imgurl:'assets/images/golden_temple.jpg', price: 700 ),
+            MyListItem(placename:'Qutub Minar' ,imgurl:'assets/images/qutub_minar.jpg', price: 500 ),
           ],
         ),
       ),
@@ -34,15 +32,12 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class MyListItem extends StatelessWidget {
   final String placename, imgurl;
   final double price;
   MyListItem({super.key, required this.placename, required this.imgurl, required this.price});
 
-
-  final inrFormat = NumberFormat.currency(locale: 'en_IN', symbol: 'Rs.',decimalDigits: 2);
-
+  final inrFormat = NumberFormat.currency(locale: 'en_IN', symbol: 'Ticket Price - Rs.',decimalDigits: 2);
 
   @override
   Widget build(BuildContext context) {
